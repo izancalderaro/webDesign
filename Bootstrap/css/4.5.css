@@ -1,0 +1,43 @@
+.logotipo img{
+    height: 30px;
+
+}
+
+.logotipo{
+
+}
+
+.perfil {
+    width: 300px;
+    /* padding: 10px; */
+}
+
+.perfil img{
+    padding-top: 5px;
+}
+
+
+.perfil li:first-child {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+@media (max-width: 991px) {
+    .perfil {
+        color: #fff;
+        background-color: transparent;
+        border: transparent; 
+    }
+/* 
+    .perfil a {
+        color: rgba(255,255,255,.5);
+        display: block;
+     padding: 5px 0; 
+    }
+
+    .perfil a:hover{
+        text-decoration: none;
+        color: #fff;
+    } */
+}
