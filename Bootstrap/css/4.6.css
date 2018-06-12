@@ -24,7 +24,8 @@
     margin-bottom: 2px;
 }
 
- 
+$breadcrumb-divider: quote(">");
+
 @media (max-width: 991px) {
     .perfil {
         color: #fff;      
