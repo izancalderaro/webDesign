@@ -19,12 +19,10 @@
 
 
 $(function () {
-
     $('.needs-validation').on('submit', function (event) {
          if (event.currentTarget.checkValidity()===false) { // mesmo que 'this'
             event.preventDefault();
-            event.stopPropagation();
-            alert('Preencha os campos');
+            event.stopPropagation();            
             $('.needs-validation').addClass('was-validated');
         }
     });

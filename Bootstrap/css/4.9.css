@@ -36,7 +36,7 @@
 @media (max-width: 991px) {
     .perfil {
         color: #fff;      
-        border: 0; /*por estar usando float dentro dos objetos contidos na div="dropdown-menu"  com o display definito os elementos ficam contidos dentro da div */
+         border: 1px solid #fff; /*por estar usando float dentro dos objetos contidos na div="dropdown-menu"  com o display definito os elementos ficam contidos dentro da div */
 
     }
 
