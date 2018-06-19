@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Bootstrap - 4.10</title>
+        <title>Bootstrap - 4.13</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
                 crossorigin="anonymous">
@@ -254,7 +254,7 @@
 
                 <div class="row">
                         <div class="col-8">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalOS">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalOS" id="btnOS">
                                         Nova Ordem de Serviço
                                 </button>
                         </div>
@@ -289,22 +289,84 @@
 
                 <div class="modal fade" id="modalOS">
                         <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                        <div class="modal-header">
-                                                <h4 class="modal-title" id="modelTitleId">Nova Ordem de Serviço</h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                </button>
-                                        </div>
-                                        <div class="modal-body">
-                                                body
+                                <form action="" class="needs-validation" novalidate id="formOS">
+                                        <div class="modal-content">
+                                                <div class="modal-header">
+                                                        <h4 class="modal-title" id="modelTitleId">Nova Ordem de Serviço</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                </div>
+                                                <div class="modal-body">
 
+                                                        
+                                                                <div class="alert alert-success">
+                                                                        OS aberta com sucesso...
+                                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                </div>                                                
+
+                                                        <div class="form-row">
+                                                                <div class="form-group col-sm-12">
+                                                                        <label class="control-label">Código da OS</label>
+                                                                        <p class="form-control-static">65151</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="row">
+                                                                <div class="form-group col-sm-5">
+                                                                        <label class="control-label" for="Cliente">Cliente</label>
+                                                                        <select name="cliente" id="Cliente" class="form-control" required>
+                                                                                <option value="">Selecione...</option>
+                                                                                <option value="1">Frodo Bolseiro</option>
+                                                                                <option value="2">Gandalf Cinzento</option>
+                                                                                <option value="3">Sauron de Mordor</option>
+                                                                        </select>
+                                                                        <div class="invalid-feedback">Seleção obrigatória!</div>
+                                                                        <div class="valid-feedback">Ok</div>
+                                                                </div>
+                                                                <div class="form-group col-sm-7">
+                                                                        <label class="control-label" for="Servicos">Serviços</label>
+                                                                        <select name="servico" id="Servicos" class="form-control" required>
+                                                                                <option value="">Selecione...</option>
+                                                                                <option value="1">Ajuste de Data/Hora</option>
+                                                                                <option value="2">Conserto de Engrenagem</option>
+                                                                                <option value="3">Troca de Bateria</option>
+                                                                        </select>
+                                                                        <div class="invalid-feedback">Seleção obrigatória!</div>
+                                                                        <div class="valid-feedback">Ok</div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                                <div class="form-group col-sm-12">
+                                                                        <label class="control-label" for="Observacao">Observação</label>
+                                                                        <textarea name="observacao" id="Observacao" class="form-control" rows="3" required></textarea>
+                                                                        <div class="invalid-feedback">Preenchimento obrigatório!</div>
+                                                                        <div class="valid-feedback">Ok</div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="row">
+                                                                <div class="form-group col-sm-4">
+                                                                        <label class="control-label is-valid" for="Valor">Valor</label>
+                                                                        <div class="input-group">
+                                                                                <div class="input-group-prepend">
+                                                                                        <div class="input-group-text">R$</div>
+                                                                                </div>
+                                                                                <input type="text" name="valor" id="Valor" class="form-control" required>
+                                                                                <div class="invalid-feedback">Preenchimento obrigatório!</div>
+                                                                                <div class="valid-feedback">Ok</div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                        <button type="reset" class="btn btn-light">Limpar</button>
+                                                        <button type="submit" class="btn btn-primary">Salvar</button>
+                                                </div>
                                         </div>
-                                        <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                <button type="button" class="btn btn-primary">Salvar</button>
-                                        </div>
-                                </div>
+                                </form>
                         </div>
                 </div>
         </div>
@@ -324,7 +386,7 @@
                 crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
                 crossorigin="anonymous"></script>
-        <script src="js/4.9.js"></script>
+        <script src="js/4.12.js"></script>
 </body>
 
 </html>
