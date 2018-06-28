@@ -26,7 +26,8 @@
 }
 
 .selecionado{
-    color: royalblue;
+    color: #fff;
+    background-color: darkcyan; 
 }
  
 @media (max-width: 991px) {
